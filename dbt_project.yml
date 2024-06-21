@@ -3,7 +3,7 @@ name: 'jaffle_shop'
 config-version: 2
 version: '0.1'
 
-profile: 'jaffle_shop'
+profile: 'dbt-civis'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -25,10 +25,20 @@ seeds:
 
 models:
   jaffle_shop:
+    customers:
+      +alias: "customers"
+    orders:
+      +alias: "orders"
     materialized: table
     staging:
       materialized: view
+      stg_customers:
+        +alias: "stg_customers"
+      stg_orders:
+        +alias: "stg_orders"
+      stg_payments:
+        +alias: "stg_payments"
       +docs:
-        node_color: 'silver'
+        node_color: "silver"
     +docs:
-      node_color: 'gold'
+      node_color: "gold"

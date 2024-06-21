@@ -4,6 +4,8 @@ duckcli>=0.2.1
 # Database adapter
 dbt-duckdb>=1.7.3,<1.8.0
 
+dbt-redshift>=1.0.0
+
 # dbt Core 1.
 dbt-core>=1.7.9,<1.8.0
 
