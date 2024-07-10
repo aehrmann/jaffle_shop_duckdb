@@ -14,4 +14,4 @@ dbt-civis:
       pass: "{{ env_var('DATABASE_PASSWORD') }}"
       dbname: "{{ env_var('DATABASE_NAME') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
-      threads: "{{ env_var('THREADS') | as_number }}"
+      threads: 4
