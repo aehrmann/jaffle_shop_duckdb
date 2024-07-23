@@ -1,4 +1,4 @@
-dbt-civis:
+dbt-civis-redshift:
   target: "{{ env_var('DBT_TARGET') }}"
   default: redshift_adapter
   outputs:
