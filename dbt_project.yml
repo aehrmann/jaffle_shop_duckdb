@@ -41,4 +41,4 @@ models:
       +docs:
         node_color: "silver"
     +docs:
-      node_color: "gold"
+      node_color: {{ env_var('NODE_COLOR') }}
