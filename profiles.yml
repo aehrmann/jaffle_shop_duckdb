@@ -17,13 +17,9 @@ dbt-civis:
       threads: 4
     bigquery_service_account_adapter:
       type: "{{ env_var('DATABASE_TYPE') }}"
-      host: "{{ env_var('DATABASE_HOST', 'default_host') }}"
-      port: "{{ env_var('DATABASE_PORT', '1234') | as_number }}"
       method: "{{ env_var('GCP_AUTH_METHOD') }}"
-      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      project: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
-      user: "{{ env_var('DATABASE_USERNAME', 'default_user') }}"
-      pass: "{{ env_var('DATABASE_PASSWORD') }}"
-      schema: "{{ env_var('DBT_SCHEMA') }}"
-      
+      keyfile: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       threads: 4
+
