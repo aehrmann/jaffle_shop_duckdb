@@ -19,13 +19,11 @@ dbt-civis:
       type: "{{ env_var('DATABASE_TYPE') }}"
       host: "{{ env_var('DATABASE_HOST', 'default_host') }}"
       port: "{{ env_var('DATABASE_PORT', '1234') | as_number }}"
-      type: "{{ env_var('DATABASE_TYPE') }}"
       method: "{{ env_var('GCP_AUTH_METHOD') }}"
       project: "{{ env_var('GCP_PROJECT_ID') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
       user: "{{ env_var('DATABASE_USERNAME', 'default_user') }}"
       pass: "{{ env_var('DATABASE_PASSWORD') }}"
-      dbname: "{{ env_var('DATABASE_NAME') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
       
       threads: 4
