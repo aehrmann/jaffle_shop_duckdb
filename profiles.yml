@@ -9,7 +9,7 @@ dbt-civis:
     redshift_adapter:
       type: "{{ env_var('DATABASE_TYPE') }}"
       host: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
-      port: "{{ env_var('DATABASE_PORT') | as_number }}"
+      port: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       user: "{{ env_var('DATABASE_USERNAME') }}"
       pass: "{{ env_var('DATABASE_PASSWORD') }}"
       dbname: "{{ env_var('DATABASE_NAME') }}"
