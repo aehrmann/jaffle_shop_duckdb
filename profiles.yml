@@ -21,5 +21,5 @@ dbt-civis:
       unexpected: "{{ env_var('DATABASE_PASSWORD') }}"
       project: "{{ env_var('GCP_PROJECT_ID') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
-      keyfile: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
+      # keyfile: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       threads: 4
