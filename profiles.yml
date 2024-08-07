@@ -8,13 +8,13 @@ dbt-civis:
       threads: 24
     redshift_adapter:
       type: "{{ env_var('DATABASE_TYPE') }}"
-      host: "{{ env_var('DATABASE_HOST') }}"
-      port: "{{ env_var('DATABASE_PORT') | as_number }}"
-      user: "{{ env_var('DATABASE_USERNAME') }}"
-      pass: "{{ env_var('DATABASE_PASSWORD') }}"
+      host: "{{ env_var('DATABASE_HOST', 'default') }}"
+      port: "{{ env_var('DATABASE_PORT', '1234') | as_number }}"
+      user: "{{ env_var('DATABASE_USERNAME', 'default') }}"
+      pass: "{{ env_var('DATABASE_PASSWORD', 'default') }}"
       keyfile: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
-      dbname: "{{ env_var('DATABASE_NAME') }}"
-      schema: "{{ env_var('DBT_SCHEMA') }}"
+      dbname: "{{ env_var('DATABASE_NAME', 'default') }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'default') }}"
       threads: 4
     bigquery_service_account_adapter:
       type: "{{ env_var('DATABASE_TYPE') }}"
