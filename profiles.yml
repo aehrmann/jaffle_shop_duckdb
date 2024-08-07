@@ -10,10 +10,10 @@ dbt-civis:
       type: "{{ env_var('DATABASE_TYPE') }}"
       host: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       port: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
-      user: "{{ env_var('DATABASE_USERNAME') }}"
-      pass: "{{ env_var('DATABASE_PASSWORD') }}"
-      dbname: "{{ env_var('DATABASE_NAME') }}"
-      schema: "{{ env_var('DBT_SCHEMA') }}"
+      user: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
+      pass: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
+      dbname: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
+      schema: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       threads: 4
     bigquery_service_account_adapter:
       type: "{{ env_var('DATABASE_TYPE') }}"
