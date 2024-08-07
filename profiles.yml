@@ -10,8 +10,8 @@ dbt-civis:
       type: "{{ env_var('DATABASE_TYPE') }}"
       host: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
       port: "{{ env_var('GCP_SERVICE_ACCOUNT_KEYFILE_JSON') }}"
-      user: "{{ env_var('DATABASE_USERNAME') }}"
-      pass: "{{ env_var('DATABASE_PASSWORD') }}"
+      user: "{{ env_var('DATABASE_USERNAME', 'some_user') }}"
+      pass: "{{ env_var('DATABASE_PASSWORD', 'password') }}"
       dbname: "{{ env_var('DATABASE_NAME') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
       threads: 4
