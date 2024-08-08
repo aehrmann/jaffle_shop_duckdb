@@ -7,12 +7,11 @@ dbt-civis:
       path: "jaffle_shop.duckdb"
       threads: 24
     redshift_adapter:
-      # type: "{{ env_var('DATABASE_TYPE') }}"
-      type: "{{ env_var('DBT_ENV_SECRET_DATABASE_PASSWORD') }}"
+      type: "{{ env_var('DATABASE_TYPE') }}"
       host: "{{ env_var('DATABASE_HOST') }}"
       port: "{{ env_var('DATABASE_PORT') | as_number }}"
       user: "{{ env_var('DATABASE_USERNAME') }}"
-      pass: "{{ env_var('DBT_ENV_SECRET_DATABASE_PASSWORD') }}"
+      pass: "{{ env_var('DATABASE_PASSWORD') }}"
       dbname: "{{ env_var('DATABASE_NAME') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
       threads: 4
