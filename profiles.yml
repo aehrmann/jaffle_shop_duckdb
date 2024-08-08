@@ -18,9 +18,10 @@ dbt-civis:
     civis_bigquery:
       type: "{{ env_var('DATABASE_TYPE') }}"
       # type: "{{ env_var('DATABASE_PASSWORD') }}"
-      # method: "{{ env_var('GCP_AUTH_METHOD') }}"
-      method: "{{ env_var('DATABASE_PASSWORD') }}"
-      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      method: "{{ env_var('GCP_AUTH_METHOD') }}"
+      # method: "{{ env_var('DATABASE_PASSWORD') }}"
+      # project: "{{ env_var('GCP_PROJECT_ID') }}"
+      project: "{{ env_var('DATABASE_PASSWORD') }}"
       schema: "{{ env_var('DBT_SCHEMA') }}"
       keyfile: "{{ env_var('DATABASE_PASSWORD') }}"
       threads: 4
