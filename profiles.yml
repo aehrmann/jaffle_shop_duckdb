@@ -20,6 +20,6 @@ dbt-civis:
       type: "{{ env_var('DATABASE_TYPE') }}"
       method: "{{ env_var('GCP_AUTH_METHOD') }}"
       project: "{{ env_var('GCP_PROJECT_ID') }}"
-      schema: "{{ env_var('DBT_ENV_SECRET_DATABASE_PASSWORD') }}"
+      schema: "{{ env_var('DBT_SCHEMA') }}"
       keyfile: "{{ env_var('DBT_ENV_SECRET_DATABASE_PASSWORD') }}"
       threads: 4
